@@ -1,0 +1,435 @@
+<?xml version="1.0" ?>
+<robot name="lapras_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find lapras_sim)/urdf/materials.xacro" />
+<xacro:include filename="$(find lapras_sim)/urdf/lapras_urdf.trans" />
+<xacro:include filename="$(find lapras_sim)/urdf/lapras_urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.003378781940864467 2.240969994186515e-06 0.06345999999999999" rpy="0 0 0"/>
+    <mass value="2.66119702526629"/>
+    <inertia ixx="0.00974" iyy="0.026333" izz="0.036062" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MotorBracket_v1_1">
+  <inertial>
+    <origin xyz="-0.015500002350700986 -0.006888187169975468 0.007341692818743625" rpy="0 0 0"/>
+    <mass value="0.029603665959913542"/>
+    <inertia ixx="9e-06" iyy="8e-06" izz="9e-06" ixy="-0.0" iyz="-2e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0155 -0.09 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/MotorBracket_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0155 -0.09 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/MotorBracket_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MotorBracket_v1__1__1">
+  <inertial>
+    <origin xyz="0.01550000235070098 0.006888187169975399 0.007341692818743681" rpy="0 0 0"/>
+    <mass value="0.029603665959913542"/>
+    <inertia ixx="9e-06" iyy="8e-06" izz="9e-06" ixy="-0.0" iyz="2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0155 0.09 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/MotorBracket_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0155 0.09 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/MotorBracket_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Motor_v1__1__1">
+  <inertial>
+    <origin xyz="-0.009191401001469089 -0.03790852980642254 0.009191999999481462" rpy="0 0 0"/>
+    <mass value="0.47787780551719694"/>
+    <inertia ixx="0.000299" iyy="5.6e-05" izz="0.000299" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.009192 -0.094569 -0.075837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Motor_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.009192 -0.094569 -0.075837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Motor_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Motor_v1_1">
+  <inertial>
+    <origin xyz="-0.009191400405422592 0.03790852980642258 0.009192000000518591" rpy="0 0 0"/>
+    <mass value="0.47787780551719694"/>
+    <inertia ixx="0.000299" iyy="5.6e-05" izz="0.000299" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.009192 0.094569 -0.075837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.009192 0.094569 -0.075837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ydlidar_base_v5_1">
+  <inertial>
+    <origin xyz="0.06761097664511198 0.020859849955070977 0.008623214289900732" rpy="0 0 0"/>
+    <mass value="0.469663968235366"/>
+    <inertia ixx="0.000427" iyy="0.000887" izz="0.001181" ixy="-0.0" iyz="0.0" ixz="-6.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.11914 0.02086 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/ydlidar_base_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.11914 0.02086 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/ydlidar_base_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Barbell_v4__2__1">
+  <inertial>
+    <origin xyz="-5.551115123125783e-17 -3.1879089884571067e-15 0.052581463666413836" rpy="0 0 0"/>
+    <mass value="0.09798102385329209"/>
+    <inertia ixx="0.000112" iyy="0.000102" izz="1.1e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.09 -0.0 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Barbell_v4__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.09 -0.0 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Barbell_v4__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Barbell_v4__1__1">
+  <inertial>
+    <origin xyz="-3.2057689836051395e-15 -1.3877787807814457e-17 0.052581463666413794" rpy="0 0 0"/>
+    <mass value="0.09798102385329208"/>
+    <inertia ixx="0.000102" iyy="0.000112" izz="1.1e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.072 0.08 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Barbell_v4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.072 0.08 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Barbell_v4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Barbell_v4_1">
+  <inertial>
+    <origin xyz="3.1780134079895106e-15 0.0 0.05258146366641378" rpy="0 0 0"/>
+    <mass value="0.09798102385329209"/>
+    <inertia ixx="0.000102" iyy="0.000112" izz="1.1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.072 -0.08 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Barbell_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.072 -0.08 -0.06596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/Barbell_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mid_base_v8_1">
+  <inertial>
+    <origin xyz="0.07124371334793965 -0.0799683699998151 0.001500000000000043" rpy="0 0 0"/>
+    <mass value="0.49453185821915246"/>
+    <inertia ixx="0.000754" iyy="0.001164" izz="0.001918" ixy="4e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0905 -0.08 -0.12021" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/mid_base_v8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0905 -0.08 -0.12021" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/mid_base_v8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ydlidar_x4_v1_1">
+  <inertial>
+    <origin xyz="0.03029455171374079 0.030999849954996873 0.03770114222279111" rpy="0 0 0"/>
+    <mass value="1.1515616542314233"/>
+    <inertia ixx="0.000489" iyy="0.000861" izz="0.000987" ixy="-0.0" iyz="-0.0" ixz="0.000148"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.168364 0.031 -0.06996" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/ydlidar_x4_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.168364 0.031 -0.06996" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/ydlidar_x4_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="topper_base_v7_1">
+  <inertial>
+    <origin xyz="0.07230390007609636 -0.07999999999999996 0.0024999999999999745" rpy="0 0 0"/>
+    <mass value="3.18470053243339"/>
+    <inertia ixx="0.016652" iyy="0.029765" izz="0.046404" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.072 -0.08 -0.17096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/topper_base_v7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.072 -0.08 -0.17096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/topper_base_v7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="-2.979255688107887e-10 0.015140536035911395 1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="2.7295236460278423"/>
+    <inertia ixx="0.002744" iyy="0.005075" izz="0.002744" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.113869 -0.085029" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.113869 -0.085029" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="2.981209200907584e-10 -0.015140536035911367 9.71445146547012e-17" rpy="0 0 0"/>
+    <mass value="2.7295236460278423"/>
+    <inertia ixx="0.002744" iyy="0.005075" izz="0.002744" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.113869 -0.085029" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.113869 -0.085029" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_urdf_v4__1__1">
+  <inertial>
+    <origin xyz="-9.828451930510296e-06 4.13190816823857e-06 -0.00964031607284841" rpy="0 0 0"/>
+    <mass value="0.14226334327662343"/>
+    <inertia ixx="1.9e-05" iyy="2.2e-05" izz="2.3e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14 -0.0 -0.06096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/caster_urdf_v4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14 -0.0 -0.06096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/caster_urdf_v4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_urdf_v4_1">
+  <inertial>
+    <origin xyz="0.012490171548069612 0.009504131908168236 -0.00964031607284841" rpy="0 0 0"/>
+    <mass value="0.14226334327662343"/>
+    <inertia ixx="1.9e-05" iyy="2.2e-05" izz="2.3e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.14 0.0095 -0.06096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/caster_urdf_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.14 0.0095 -0.06096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://lapras_sim/meshes/caster_urdf_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid29" type="fixed">
+  <origin xyz="0.0155 0.09 0.06596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="MotorBracket_v1_1"/>
+</joint>
+
+<joint name="Rigid30" type="fixed">
+  <origin xyz="-0.0155 -0.09 0.06596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="MotorBracket_v1__1__1"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin xyz="-0.006308 0.004569 0.009877" rpy="0 0 0"/>
+  <parent link="MotorBracket_v1_1"/>
+  <child link="Motor_v1__1__1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin xyz="0.024692 -0.004569 0.009877" rpy="0 0 0"/>
+  <parent link="MotorBracket_v1__1__1"/>
+  <child link="Motor_v1_1"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin xyz="0.11914 -0.02086 0.06596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="ydlidar_base_v5_1"/>
+</joint>
+
+<joint name="Rigid36" type="fixed">
+  <origin xyz="0.09 0.0 0.06596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Barbell_v4__2__1"/>
+</joint>
+
+<joint name="Rigid37" type="fixed">
+  <origin xyz="-0.072 -0.08 0.06596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Barbell_v4__1__1"/>
+</joint>
+
+<joint name="Rigid38" type="fixed">
+  <origin xyz="-0.072 0.08 0.06596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Barbell_v4_1"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin xyz="-0.0185 0.0 0.05425" rpy="0 0 0"/>
+  <parent link="Barbell_v4_1"/>
+  <child link="mid_base_v8_1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin xyz="0.049224 -0.01014 0.004" rpy="0 0 0"/>
+  <parent link="ydlidar_base_v5_1"/>
+  <child link="ydlidar_x4_v1_1"/>
+</joint>
+
+<joint name="Rigid41" type="fixed">
+  <origin xyz="0.0 0.0 0.105" rpy="0 0 0"/>
+  <parent link="Barbell_v4_1"/>
+  <child link="topper_base_v7_1"/>
+</joint>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin xyz="-0.009192 0.0193 0.009192" rpy="0 0 0"/>
+  <parent link="Motor_v1__1__1"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin xyz="-0.009192 -0.0193 0.009192" rpy="0 0 0"/>
+  <parent link="Motor_v1_1"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid50" type="fixed">
+  <origin xyz="0.14 0.0 0.06096" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_urdf_v4__1__1"/>
+</joint>
+
+<joint name="Rigid51" type="fixed">
+  <origin xyz="-0.14 -0.0095 0.06096" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_urdf_v4_1"/>
+</joint>
+
+</robot>
