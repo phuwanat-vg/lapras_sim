@@ -27,6 +27,7 @@ def generate_launch_description():
     urdf_path = os.path.join(
         get_package_share_directory('lapras_sim'),
         'models',
+        'lapras_description',
         'lapras_urdf.sdf'
     )
 
