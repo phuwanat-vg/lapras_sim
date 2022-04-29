@@ -258,7 +258,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://models/meshes/caster_v2_1.stl</uri>
+            <uri>model://models/meshes/caster_urdf_v4_1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -278,7 +278,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://models/meshes/caster_v2__2__1.stl</uri>
+            <uri>model://models/meshes/caster_urdf_v4__1__1.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -617,7 +617,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://models/meshes/caster_v2_1.stl</uri>
+            <uri>model://models/meshes/caster_urdf_v4_1.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -632,7 +632,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://models/meshes/caster_v2__2__1.stl</uri>
+            <uri>model://models/meshes/caster_urdf_v4__1__1.stl</uri>
           </mesh>
         </geometry>
         <material>
